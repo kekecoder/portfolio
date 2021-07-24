@@ -1,0 +1,231 @@
+// colors used for the project
+$primary-color: #4b4b21;
+$secondary-color: #a659a3;
+$white-color: #fff;
+$gray-color: #657;
+$black-color: #000;
+
+// fonts variable
+$navfont: "Oswald", sans-serif;
+$textfont: "STIX Two Math", serif;
+
+/* css reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* body styling */
+body {
+  font-family: $textfont;
+}
+
+/* main page container starts here */
+#container {
+  display: grid;
+  grid-template-rows: auto min-height 5em;
+  grid-template-columns: minmax(25em, 1fr) 16em;
+  grid-template-areas:
+    "banner banner"
+    "main main"
+    "footer footer";
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Main body body of the web page */
+
+/* header section */
+header {
+  height: 3em;
+  text-align: center;
+  background: url("../img/banner.jpg") no-repeat center center;
+  background-size: cover;
+  height: 25em;
+  grid-area: banner;
+}
+nav {
+  background-color: #000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+nav ul li {
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  flex: 1 1 50%;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.5em 1em;
+  margin: 0.25em;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: $navfont;
+  text-transform: uppercase;
+  color: white;
+}
+nav ul li a:hover {
+  background-color: #a659a3;
+  color: $white-color;
+  border-radius: 0.5em;
+}
+
+.hero {
+  margin-top: 2em;
+}
+
+.hi {
+  font-size: 2em;
+  color: $gray-color;
+}
+
+.hello {
+  font-size: 3em;
+  display: block;
+  font: $textfont;
+  color: $primary-color;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #000;
+  text-align: center;
+  padding-top: 2.7em;
+  font-weight: bolder;
+}
+
+span.dev {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  color: #ffa500;
+  text-shadow: 2px 2px 2px #000;
+  display: block;
+  text-align: center;
+  margin-top: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+main {
+  grid-area: main;
+  font-size: 1em;
+  color: $gray-color;
+  margin: 0.25em;
+}
+
+.intro {
+  font-size: 1.2em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+  word-spacing: 2px;
+}
+
+.skills {
+  width: 100%;
+  margin: 0 auto;
+}
+.skills h4 {
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  border-bottom: 2px solid;
+  padding-bottom: 3px;
+}
+
+.left,
+.right {
+  width: 45%;
+  margin: 15px auto;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.stuff {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.stuff li {
+  padding-top: 5px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.right h3,
+.left h3 {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-family: $textfont;
+  padding-bottom: 5px;
+}
+
+.experience {
+  clear: both;
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  border-bottom: 2px solid;
+  padding-bottom: 3px;
+}
+h2 {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-family: $textfont;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+footer {
+  grid-area: footer;
+  text-align: center;
+  margin-top: 5px;
+  background-color: #413e3e;
+  color: $white-color;
+}
+
+.contact ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-bottom: 70px;
+}
+
+.contact ul li {
+  padding-left: 10px;
+}
+
+footer h3 {
+  color: $white-color;
+  font-family: $textfont;
+  font-weight: 800;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: $black-color;
+  margin-top: 10px;
+}
+
+.copyright {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid $black-color;
+}
