@@ -9,24 +9,15 @@
 /* body styling */
 body {
   font-family: "STIX Two Math", serif;
-  width: fit-content;
+  font-size: 100%;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* main page container starts here */
-#container {
-  display: grid;
-  grid-template-rows: auto min-height 5em;
-  grid-template-columns: minmax(25em, 1fr) 16em;
-  grid-template-areas: "banner banner" "main main" "footer footer";
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-}
-
 /* Main body body of the web page */
 /* header section */
 header {
-  height: 3em;
   text-align: center;
   background: url("../img/banner.jpg") no-repeat center center;
   background-size: cover;
@@ -42,13 +33,14 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  font-size: 0.8em;
+  font-size: 0.7em;
   letter-spacing: 0.2em;
   flex: 1 1 50%;
+  text-transform: uppercase;
 }
 
 nav ul li a {
@@ -58,8 +50,9 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.2em;
   font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
   color: white;
+  border: none;
+  border-radius: none;
 }
 
 nav ul li a:hover {
@@ -72,6 +65,15 @@ nav ul li a:hover {
   margin-top: 2em;
 }
 
+img {
+  width: 15%;
+  border-radius: 50%;
+  border: 2px double;
+  position: absolute;
+  left: 10px;
+  margin-top: 5px;
+}
+
 .hi {
   font-size: 2em;
   color: #657;
@@ -81,9 +83,9 @@ nav ul li a:hover {
   font-size: 3em;
   display: block;
   font: "STIX Two Math", serif;
-  color: #4b4b21;
+  color: #505050;
   text-transform: uppercase;
-  text-shadow: 1px 1px #000;
+  text-shadow: 2px 2px 1px #e2e2e2;
   text-align: center;
   padding-top: 2.7em;
   font-weight: bolder;
@@ -92,7 +94,7 @@ nav ul li a:hover {
 span.dev {
   font-size: 1.4em;
   text-transform: uppercase;
-  color: #ffa500;
+  color: #e2e2e2;
   text-shadow: 2px 2px 2px #000;
   display: block;
   text-align: center;
@@ -105,7 +107,7 @@ main {
   grid-area: main;
   font-size: 1em;
   color: #657;
-  margin: 0.25em;
+  margin: 2.5%;
 }
 
 .intro {
@@ -233,6 +235,82 @@ footer h3 {
   border-top: 1px solid #000;
   width: 90%;
   margin: 0 auto;
+}
+
+.fa-facebook {
+  color: #4267b2;
+}
+
+.fa-twitter {
+  color: #00acee;
+}
+
+.fa-linkedin {
+  color: #0e76a8;
+}
+
+.fa-github {
+  color: #4078c0;
+}
+
+.fab {
+  font-size: 2em;
+  padding-left: 20px;
+}
+
+.fab:hover {
+  color: #e2e2e2;
+}
+
+/* Responsive Design*/
+@media screen and (min-width: 940px) {
+  #container {
+    display: grid;
+    grid-template-rows: auto min-height 5em;
+    grid-template-columns: minmax(25em, 1fr) 16em;
+    grid-template-areas: "banner banner" "main main" "footer footer";
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+@media screen and (min-width: 280px) {
+  .hello {
+    font-size: 1.49em;
+    padding-top: 3.7em;
+  }
+
+  span.dev {
+    font-size: 1em;
+  }
+
+  nav ul li a {
+    border-radius: 0.235em;
+    border: 1px solid #fff;
+  }
+
+  header {
+    height: 18em;
+  }
+}
+@media screen and (min-width: 400px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li {
+    flex: none;
+  }
+
+  .hello {
+    font-size: 1.8em;
+    padding-top: 6em;
+  }
+
+  nav ul li a {
+    border-radius: none;
+    border: none;
+  }
 }
 
 /*# sourceMappingURL=kekecoder.css.map */
