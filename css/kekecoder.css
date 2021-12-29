@@ -21,7 +21,7 @@ header {
   text-align: center;
   background: url("../img/banner.jpg") no-repeat center center;
   background-size: cover;
-  height: 25em;
+  height: 35em;
   grid-area: banner;
 }
 
@@ -300,6 +300,10 @@ footer h3 {
 
   nav ul li {
     flex: none;
+  }
+
+  header {
+    height: 22em;
   }
 
   .hello {
